@@ -1,4 +1,4 @@
-#include <unistd.h>
+#include "main.h"
 
 /**
  * _putchar - writes the character c to stdout
@@ -20,13 +20,12 @@ int _putchar(char c)
  */
 int buffering(char c)
 {
-	const int BUFF_SIZE = 1024;
-	static char buffer[BUFF_SIZE];
+	static char buffer[1024];
 	static int index;
 
-	if (index == BUFF_SIZE || c == -1)
+	if (index == 1024 || c == -1)
 	{
-		write(1, buffer, index)
+		write(1, buffer, index);
 		index = 0;
 	}
 
