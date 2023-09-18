@@ -6,7 +6,7 @@
 * Return: number of printed characters
 */
 
-int _printf(const char * const format, ...)
+int _printf(const char *format, ...)
 {
 	/* Declaring variables */
 	va_list ap;
