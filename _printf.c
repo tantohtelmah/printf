@@ -6,12 +6,12 @@
 * Return: number of printed characters
 */
 
-int _printf(const char *format, ...)
+int _printf(const char * const format, ...)
 {
 	/* Declaring variables */
 	va_list ap;
 	int input_size = 0;
-	int pattern_size = 3;
+	int pattern_size = 2;
 	int i = 0, j;
 
 	input_form pattern[] = {

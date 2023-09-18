@@ -5,8 +5,9 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <stdio.h>
+#include <limits.h>
 
-int _printf(const char *format, ...);
+int _printf(const char * const format, ...);
 int printf_percent(void);
 int printf_string(va_list list);
 int printf_char(va_list list);

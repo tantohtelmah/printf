@@ -9,12 +9,10 @@
  */
 int main(void)
 {
-    /*int len;
-    int len2;
-    unsigned int ui;
-    void *addr;*/
+	int len;
 
-    printf("Let's try to printf a simple sentence.\n");
-    _printf("Let's try to printf a simple sentence.\n");
+	_printf("Let's try to printf a simple sentence.\n");
+	_printf("Length:[%d, %i]\n", len, len);
+
 	return (0);
 }
