@@ -6,6 +6,8 @@
  */
 int printf_int(int n)
 {
+	int rem;
+
 	if (n < 0)
 	{
 		putchar('-');
@@ -17,11 +19,12 @@ int printf_int(int n)
 	}
 	else
 	{
-		/* print the leftmost digits first */
-		print_int(n / 10);
-
-		/* print the rightmost digit */
-		_putchar(n % 10 + '0');
+		print_int(n / 16);
+		rem = n % 16;
+		if (rem > 10)
+			_putchar(rem + '0');
+		else
+			_putchar(rem - 10 + 'A');
 	}
 	return (1);
 }

@@ -21,7 +21,7 @@ int printf_int(int n)
 		print_int(n / 10);
 
 		/* print the rightmost digit */
-		putchar(n % 10 + '0');
+		_putchar(n % 10 + '0');
 	}
 	return (1);
 }

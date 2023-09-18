@@ -1,16 +1,11 @@
 #include "main.h"
 /**
- * printf_int - prints integers
+ * printf_unsignedint - prints integers
  * @n: int
  * Return: 1 for success
  */
-int printf_int(int n)
+int printf_unsignedint(int n)
 {
-	if (n < 0)
-	{
-		putchar('-');
-		n = -n;
-	}
 	if (n == 0)
 	{
 		putchar('0');
