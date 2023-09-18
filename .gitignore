@@ -1,0 +1,14 @@
+# -*- mode: gitignore; -*-
+*~
+
+<<<<<<< HEAD
+========
+_# -*- mode: gitignore; -*-
+*~
+<<<<<<< HEAD
+=======
+__printf_old.c
+
+# main
+*-main.c
+>>>>>>> origin/master
