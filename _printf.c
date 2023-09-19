@@ -11,13 +11,21 @@ int _printf(const char *format, ...)
 	/* Declaring variables */
 	va_list ap;
 	int input_size = 0;
-	int pattern_size = 2;
+	int pattern_size = 10;
 	int i = 0, j;
 
 	input_form pattern[] = {
 		{"%s", printf_string},
 		{"%c", printf_char},
-		{"%%", printf_percent}
+		{"%%", printf_percent},
+		{"%p", printf_address},
+		{"%x", printf_hex},
+		{"%X", printf_hexX},
+		{"%i", printf_int},
+		{"%d", printf_int},
+		{"%b", printf_binary},
+		{"%o", printf_octal},
+		{"%u", printf_unsigned_int}
 	};
 
 	va_start(ap, format);
@@ -26,7 +34,6 @@ int _printf(const char *format, ...)
 		return (-1);
 	}
 
-Entry:
 	while (format[i] != '\0')
 	{
 		j = pattern_size;
@@ -36,7 +43,7 @@ Entry:
 			{
 				input_size += pattern[j].f(ap);
 				i = i + 2;
-				goto Entry;
+				break;
 			}
 			j--;
 		}

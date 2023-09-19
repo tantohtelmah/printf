@@ -1,22 +1,15 @@
 #include "main.h"
 /**
- * printf_unsignedint - prints integers
- * @n: int
+ * printf_unsigned_int - prints integers
+ * @list: va_list
  * Return: 1 for success
  */
-int printf_unsignedint(int n)
+int printf_unsigned_int(va_list list)
 {
-	if (n == 0)
-	{
-		putchar('0');
-	}
-	else
-	{
-		/* print the leftmost digits first */
-		print_int(n / 10);
+	int n;
+	int count = 0;
 
-		/* print the rightmost digit */
-		_putchar(n % 10 + '0');
-	}
-	return (1);
+	n = va_arg(list, int);
+	unsigned_con(n, &count);
+	return (count);
 }

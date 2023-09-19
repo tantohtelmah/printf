@@ -1,30 +1,18 @@
 #include "main.h"
 /**
- * printf_int - prints integers
- * @n: int
- * Return: 1 for success
+ * printf_hexX - prints integers
+ * @list: va_list
+ * Return: count for success
  */
-int printf_int(int n)
+int printf_hexX(va_list list)
 {
-	int rem;
+	int count = 0;
+	int hexaX;
 
-	if (n < 0)
-	{
-		putchar('-');
-		n = -n;
-	}
-	if (n == 0)
-	{
-		putchar('0');
-	}
-	else
-	{
-		print_int(n / 16);
-		rem = n % 16;
-		if (rem > 10)
-			_putchar(rem + '0');
-		else
-			_putchar(rem - 10 + 'A');
-	}
-	return (1);
+	hexaX = va_arg(list, int);
+	_putchar('0');
+	_putchar('x');
+	count += 2;
+	hex_converterX(hexaX, &count);
+	return (count);
 }

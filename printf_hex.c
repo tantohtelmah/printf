@@ -1,30 +1,15 @@
 #include "main.h"
 /**
- * printf_int - prints integers
- * @n: int
+ * printf_hex - prints integers
+ * @list: va_list
  * Return: 1 for success
  */
-int printf_int(int n)
+int printf_hex(va_list list)
 {
-	int rem;
+	int count = 0;
+	int hexa;
 
-	if (n < 0)
-	{
-		putchar('-');
-		n = -n;
-	}
-	if (n == 0)
-	{
-		putchar('0');
-	}
-	else
-	{
-		print_int(n / 16);
-		rem = n % 16;
-		if (rem > 10)
-			_putchar(rem + '0');
-		else
-			_putchar(rem - 10 + 'a');
-	}
-	return (1);
+	hexa = va_arg(list, int);
+	hex_converter(hexa, &count);
+	return (count);
 }

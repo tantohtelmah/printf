@@ -3,15 +3,15 @@
 
 /**
  * printf_binary - prints binary numbers of decimal numbers
- * @n: integer
+ * @list: va_list
  * Return: int
 */
-int printf_binary(int n)
+int printf_binary(va_list list)
 {
-	if (n == 0)
-	{
-		return (0);
-	}
-	printf_binary(n / 2);
-	_putchar(n % 2 + '0');
+	int bi_num;
+	int count = 0;
+
+	bi_num = va_arg(list, int);
+	binary_conversion(bi_num, &count);
+	return (count);
 }
