@@ -4,42 +4,44 @@
  * @list: va_list
  * Return: number length
  */
-int printf_int(va_list args)
+int printf_int(va_list list)
 {
-	int n = va_arg(args, int);
-	int num, last = n % 10, digit, exp = 1;
-	int  i = 1;
+	int number = va_arg(list, int);
+	int remainder = number % 10;
+	int digit, quotient;
+	int count = 1;
+	int power = 1;
 
-	n = n / 10;
-	num = n;
+	number = number / 10;
+	quotient = number;
 
-	if (last < 0)
+	if (remainder < 0)
 	{
 		_putchar('-');
-		num = -num;
-		n = -n;
-		last = -last;
-		i++;
+		quotient = -quotient;
+		number = -number;
+		remainder = -remainder;
+		count++;
 	}
-	if (num > 0)
+	if (quotient > 0)
 	{
-		while (num / 10 != 0)
+		while (quotient / 10 != 0)
 		{
-			exp = exp * 10;
-			num = num / 10;
+			power = 10 * power;
+			quotient = quotient / 10;
 		}
-		num = n;
-		while (exp > 0)
+		quotient = number;
+		while (power > 0)
 		{
-			digit = num / exp;
+			digit = quotient / power;
 			_putchar(digit + '0');
-			num = num - (digit * exp);
-			exp = exp / 10;
-			i++;
+			quotient = quotient - (power * digit);
+			power = power / 10;
+			count++;
 		}
 	}
-	_putchar(last + '0');
+	_putchar(remainder + '0');
 
-	return (i);
+	return (count);
 }
 
