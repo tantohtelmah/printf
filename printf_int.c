@@ -6,15 +6,14 @@
  */
 int printf_int(va_list list)
 {
-	int number, digit, quotient, remainder;
+	int number = va_arg(list, int);
+	int remainder = number % 10;
+	int digit, quotient;
 	int count = 1;
 	int power = 1;
 
-	number = va_arg(list, int);
-
 	number = number / 10;
 	quotient = number;
-	remainder = number % 10;
 
 	if (remainder < 0)
 	{
