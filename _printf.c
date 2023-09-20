@@ -22,7 +22,7 @@ int _printf(const char *format, ...)
 		{"%x", printf_hex},
 		{"%X", printf_hexX},
 		{"%i", printf_int},
-		{"%d", printf_int},
+		{"%d", printf_dec},
 		{"%b", printf_binary},
 		{"%o", printf_octal},
 		{"%u", printf_unsigned_int}
