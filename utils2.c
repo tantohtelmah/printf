@@ -1,4 +1,4 @@
-
+#include "main.h"
 /**
  * binary_conversion - converts from base 10 to others and prints results
  * @bi_num: int

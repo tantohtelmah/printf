@@ -21,7 +21,7 @@ int printf_octal(va_list list);
 int printf_unsigned_int(va_list list);
 
 /* putchar.c */
-int _putchar(char);
+int _putchar(char c);
 int buffering(char);
 
 /*utils.c */
