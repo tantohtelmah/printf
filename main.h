@@ -16,7 +16,7 @@ int printf_address(va_list list);
 int printf_hex(va_list list);
 int printf_hexX(va_list list);
 int printf_int(va_list list);
-int printf_dec(va_list, list);
+int printf_decimal(va_list list);
 int printf_binary(va_list list);
 int printf_octal(va_list list);
 int printf_unsigned_int(va_list list);
