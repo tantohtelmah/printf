@@ -27,14 +27,14 @@ int buffering(char);
 /*utils.c */
 int _strlen(char *s);
 int _strlenconst(const char *s);
-void hex_converterX(int n, int *counter);
+void hex_converterX(int64_t n, int *counter);
 void hex_converter(int64_t n, int *counter);
 void base_conversion(int number, int base, int *counter);
 
 /*utils2.c*/
-void base_conversion8(int number, int base, int *counter);
-void binary_conversion(int bi_num, int *counter);
-void unsigned_con(int num, int *counter);
+void base_conversion8(int64_t number, int base, int *counter);
+void binary_conversion(int64_t bi_num, int *counter);
+void unsigned_con(int64_t num, int *counter);
 
 /**
  * struct _format - structure

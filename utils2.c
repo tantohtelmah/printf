@@ -5,7 +5,7 @@
  * @counter: int
  * Return: none
 */
-void binary_conversion(int bi_num, int *counter)
+void binary_conversion(int64_t bi_num, int *counter)
 {
 	if (bi_num == 0)
 	{
@@ -23,7 +23,7 @@ void binary_conversion(int bi_num, int *counter)
  * @counter: int
  * Return: none
 */
-void unsigned_con(int num, int *counter)
+void unsigned_con(int64_t num, int *counter)
 {
 	if (num >= 0 && num <= 9)
 	{
@@ -49,7 +49,7 @@ void unsigned_con(int num, int *counter)
  * @counter: int
  * Return: none
 */
-void base_conversion8(int number, int base, int *counter)
+void base_conversion8(int64_t number, int base, int *counter)
 {
 	if (number >= 0 && number <= 9)
 	{

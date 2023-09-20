@@ -60,9 +60,9 @@ void hex_converter(int64_t n, int *counter)
  * @counter: int
  * Return: integer
 */
-void hex_converterX(int n, int *counter)
+void hex_converterX(int64_t n, int *counter)
 {
-	int rem;
+	int64_t rem;
 
 	if (n < 10)
 	{

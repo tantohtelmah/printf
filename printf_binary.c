@@ -8,10 +8,10 @@
 */
 int printf_binary(va_list list)
 {
-	int bi_num;
+	int64_t bi_num;
 	int count = 0;
 
-	bi_num = va_arg(list, int);
+	bi_num = va_arg(list, int64_t);
 	binary_conversion(bi_num, &count);
 	return (count);
 }

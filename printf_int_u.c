@@ -6,10 +6,10 @@
  */
 int printf_unsigned_int(va_list list)
 {
-	int n;
+	int64_t n;
 	int count = 0;
 
-	n = va_arg(list, int);
+	n = va_arg(list, int64_t);
 	unsigned_con(n, &count);
 	return (count);
 }

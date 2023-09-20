@@ -7,12 +7,9 @@
 int printf_hexX(va_list list)
 {
 	int count = 0;
-	int hexaX;
+	int64_t hexaX;
 
-	hexaX = va_arg(list, int);
-	_putchar('0');
-	_putchar('x');
-	count += 2;
+	hexaX = va_arg(list, int64_t);
 	hex_converterX(hexaX, &count);
 	return (count);
 }
