@@ -1,4 +1,4 @@
-#include "main.h"
+#include "../main.h"
 
 int main(void)
 {
@@ -40,4 +40,5 @@ _printf("%!\n");
 printf("%!\n");
 _printf("%K\n");
 printf("%K\n");
+exit(_printf("%c", 'S'));
 }
