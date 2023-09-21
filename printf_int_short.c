@@ -4,9 +4,9 @@
  * @list: va_list
  * Return: number length
  */
-int printf_int(va_list list)
+int printf_int_short(va_list list)
 {
-	int number = va_arg(list, int);
+	short number = va_arg(list, short);
 	int remainder = number % 10;
 	int digit, quotient;
 	int count = 1;
