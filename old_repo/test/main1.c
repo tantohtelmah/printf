@@ -10,7 +10,7 @@ _printf("A char inside a sentence: %c. Did it work?\n", 'F');
 printf("A char inside a sentence: %c. Did it work?\n", 'F');
 _printf("Let'see if the cast is correctly done: %c. Did it work?\n", 48);
 printf("Let'see if the cast is correctly done: %c. Did it work?\n", 48);
-_printf("%R\n", "This sentence is retrieved from va_args!\n");
+_printf("%s", "This sentence is retrieved from va_args!\n");
 printf("%s", "This sentence is retrieved from va_args!\n");
 _printf("Complete the sentence: You %s nothing, Jon Snow.\n", "know");
 printf("Complete the sentence: You %s nothing, Jon Snow.\n", "know");
